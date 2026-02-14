@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, Suspense } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { useSearchParams, useRouter } from "next/navigation";
 import { CHAPTERS, PERSONAL_DATA, MODAL_DATA } from "@/data/content";
 
-const pageVariant = {
+const pageVariant: Variants = {
   hidden: { opacity: 0, y: 15, scale: 0.98 },
   visible: {
     opacity: 1,
@@ -150,6 +150,7 @@ function ValentineApp() {
               >
                 <div className="bg-white rounded-[1.75rem] shadow-sm border border-primary-100 overflow-hidden group flex flex-col min-h-[520px] transition-all duration-300">
                   <div className="h-48 shrink-0 overflow-hidden relative">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={event.img}
                       alt={event.title}
@@ -172,6 +173,7 @@ function ValentineApp() {
                       rel="noreferrer"
                       className="cursor-pointer shrink-0 flex items-center gap-3 bg-primary-50 p-2.5 rounded-xl w-full border border-primary-100/50 mb-4 hover:bg-primary-100 transition-all duration-200 group/loc"
                     >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={event.locImg}
                         alt="Loc"
@@ -291,6 +293,7 @@ function ValentineApp() {
           >
             <div className="w-full max-w-sm bg-white rounded-[2.5rem] shadow-float overflow-hidden relative z-10 flex flex-col border border-white">
               <div className="h-56 w-full relative shrink-0">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={CHAPTERS[1].events[0].img}
                   alt="Final"
@@ -359,6 +362,7 @@ function ValentineApp() {
             >
               {/* Gambar Full Width tanpa padding */}
               <div className="w-full h-40 relative shrink-0">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={MODAL_DATA.img}
                   alt="Location"
